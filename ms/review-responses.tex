@@ -108,7 +108,7 @@ We have added a figure (Figure \ref{fig:runtimes}) and short discussion \llname{
 \end{point}
 
 \reply{
-    \cjb{working on this}
+    done.
 }
 
 \begin{point}{Figure 3A, S2:}
@@ -298,7 +298,7 @@ This is a good point also raised by other reviewers. We have added an appendix s
 \end{point}
 
 \reply{
-    See above. It is certainly easier and faster, but comes with significant issues either when neighborhood size is lower than the population of a deme, or when demes are small enough that the sample size approaches local $N_e$, at least in reverse-time simulations. 
+    See above. It is certainly easier and faster, but comes with significant issues either when neighborhood size is lower than the population of a deme, or when demes are small enough that the sample size approaches local $N_e$, at least in reverse-time simulations. We have shown a number of discrepencies that show up as a result of discrete models in the new appendix 
 }
 
 
@@ -323,7 +323,7 @@ Good suggestion -- we have added a supplemental figure to show the distribution 
 \end{point}
 
 \reply{
-    We have added a figure showing sample site-frequency-spectra generated from a subset of simulations run with SLiM mutations, and then using msprime to apply mutations to the same tree sequences with our generation-time scaling approach \ref{fig:slim_v_msp_sfs}. These approaches yield extremely similar spectra so we believe any error in the approximation is quite small. We also now show variation in simulation times with different mutation and tree sequence recording schemes in Figure \ref{fig:runtimes}, and included a brief discussion of this in \llname{runtimesxn}
+    We have added a figure showing sample site-frequency-spectra generated from a subset of simulations run with SLiM mutations, and then using msprime to apply mutations to the same tree sequences with our generation-time scaling approach (Figure \ref{fig:slim_v_msp_sfs}). These approaches yield extremely similar spectra so we believe any error in the approximation is quite small. We also now show variation in simulation times with different mutation and tree sequence recording schemes in Figure \ref{fig:runtimes}, and included a brief discussion of this in \llname{runtimesxn}
 }
 
 \begin{point}{}
@@ -339,11 +339,11 @@ Good suggestion -- we have added a supplemental figure to show the distribution 
 \end{point}
 
 \reply{
-    We have checked the code to the best of our abilities and did not find a bug causing the underdispersion. It seems to reflect overcorrection in the regression when using PC coordinates as covariates -- the PCA is capturing some information about the spatial genetic variation which itself covaries only weakly with the phenotype, and as a result we see anomalously low $-log10(p)$ when regressing genotype against phenotype. \cjb{Peter or Andy -- any advice here? } 
+    We have checked the code to the best of our abilities and did not find a bug causing the underdispersion. This reflects overcorrection in the regression when using PC coordinates as covariates -- the PCA is capturing some information about the spatial genetic variation which itself covaries weakly with the phenotype, and as a result we see anomalously low $-log10(p)$ when regressing genotype against phenotype. \cjb{Peter or Andy -- any advice here? } \ak{looks good to me}
 }
 
 \begin{point}{}
-    Lines 706-716, It might be worth citing Haworth et al Nature Communications 2019 (https://doi.org/10.1038/s41467-018-08219-1) who do the proposed test (GWAS for birth location) in UK Biobank to illustrate the population structure.
+    Lines 706-716, It might be worth citing Haworth et al Nature Communications 2019 (\url{https://doi.org/10.1038/s41467-018-08219-1}) who do the proposed test (GWAS for birth location) in UK Biobank to illustrate the population structure.
 \end{point}
 
 \reply{
@@ -399,11 +399,11 @@ Apologies, I had forgotten to make the repo public. The link should work for eve
 \end{point}
 
 \reply{
-    This is a good point. We evaluated this while developing the simulation using the built-in visualization tools of the SLiM GUI, and have now added a supplementary figure (Figure \ref{fig:wm_v_dd}) showing the distribution of individuals in our density-dependant spatial model and a continuous-space Wright-Fisher simulation without density dependance. 
+    This is a good point. We evaluated this while developing the simulation using the built-in visualization tools of the SLiM GUI, and have now added a supplementary figure (Figure \ref{fig:wm_v_dd_maps}) showing the distribution of individuals in our density-dependant spatial model and a continuous-space Wright-Fisher simulation without density dependance. 
 }
 
-Second, the demographic process used here involves birth and death of individuals. Does the population survive asymptotically or, like any birth-death process, eventually dies with probability one? In fact, one needs to know a little about the dynamics of the population size to decide whether the corresponding process is reasonable from a biological standpoint.
 \begin{point}{}
+Second, the demographic process used here involves birth and death of individuals. Does the population survive asymptotically or, like any birth-death process, eventually dies with probability one? In fact, one needs to know a little about the dynamics of the population size to decide whether the corresponding process is reasonable from a biological standpoint.
 
 \end{point}
 
@@ -484,7 +484,6 @@ Done. Thank you for pointing us to this study.
 \end{point}
 
 \reply{
-    \cjb{working on this}
     Thank you for this suggestion. We have slightly revised the introduction and hope it is now clearer; however since we want to cover a little history and motivation for our continuous model vs stepping-stone approaches in the intro it does have a different flow from the discussion. 
 
 }
@@ -494,7 +493,7 @@ Done. Thank you for pointing us to this study.
 \end{point}
 
 \reply{
-    \cjb{working on this}
+    \cjb{ideas?}
 }
 
 \begin{point}{}
